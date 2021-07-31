@@ -1,0 +1,139 @@
+img,
+svg
+  vertical-align: middle
+  object-fit: cover
+
+.icon
+  display: inline-flex
+  width: 25px
+  max-width: 25px
+  height:  auto
+  flex: 0 0 25px
+  box-sizing: border-box
+  img,
+  svg
+    width: 100%
+
+.img-wrp
+  width: 100%
+  margin-bottom: 1rem
+  img,
+  svg
+    width: 100%
+    +animate
+
+// burger
+.burger-wrp
+  display: none
+  padding: 0 1rem
+
+.burger
+  width: 21px
+  height: 1rem
+  position: relative
+  cursor: pointer
+  span
+    width: 100%
+    height: 2px
+    background: #fff
+    +animate
+
+.burger-line
+  position: absolute
+  left: 0
+  &:first-of-type
+    top: 0
+  &:nth-of-type(2)
+    top: calc(50% - 1px)
+  &:last-of-type
+    bottom: 0
+
+.burger.active
+  .burger-line
+    &:first-of-type
+      top: 40%
+      transform: rotate(45deg)
+    &:nth-of-type(2)
+      opacity: 0
+    &:last-of-type
+      bottom: 48%
+      transform: rotate(-45deg)
+
+// socials
+.socials
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  > li
+    margin: 0 1.4rem .5rem 0
+    &:last-of-type
+      margin-right: 0
+  a
+    &:hover
+      svg
+        fill: $main-color
+  svg
+    fill: $color-text-two
+    +animate
+
+// dropdown
+.dropdown-wrp
+  position: relative
+  cursor: pointer
+  &:hover
+    .dropdown
+      max-height: 10rem
+      z-index: 1
+
+.dropdown
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  text-align: center
+  max-height: 0
+  overflow: hidden
+  background: $color-one
+  +animate
+  a
+    display: block
+    padding: .3rem
+    +animate
+    &:hover
+      background: $main-color
+
+.breadcrumbs
+  > li
+    padding: 0
+    margin-right: .4rem
+    &::after
+      content: '/'
+      padding: .4rem
+      opacity: .5
+    &:last-of-type
+      &::after
+        content: none
+      a
+        opacity: 1
+    a
+      font: 400 .87em/1.5 $main-font
+      opacity: .5
+      &:hover
+        opacity: 1
+
+.pagination
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: center
+  padding: .5rem 0
+  > li
+    margin: 5px
+    a
+      font: 700 .87em/1.5 $main-font
+      opacity: .5
+      padding: 10px
+      &:hover,
+      &.active
+        opacity: 1

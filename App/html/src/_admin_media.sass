@@ -1,0 +1,51 @@
+@media (min-width: 1025px)
+  .burger
+    display: none
+
+  .one-of-five
+    max-width: 250px
+
+@media (max-width: 1024px)
+    .admin-aside
+      position: fixed
+      top: 50px
+      left: -100%
+      width: 100%
+      background: $color-one
+      z-index: 30
+      height: calc(100vh - 50px)
+      padding-bottom: 80px
+      overflow: auto
+      +animate
+      &.open
+        left: 0
+
+@media (max-width: 680px)
+
+    // general
+    .one-of-three,
+    .two-of-three,
+    .one-of-four,
+    .two-of-four,
+    .three-of-four
+      flex: 1 1 100%
+      width: 100%
+      &.mx-w
+        max-width: none
+
+
+    .list-three-items,
+    .list-four-items
+      > li
+        flex: 1 1 100%
+        width: 100%
+        max-width: none
+        padding: 0
+        margin-bottom: 1.9rem
+
+@media (max-width: 470px)
+    .action-box
+      .search-form,
+      .btn
+        flex: 1 1 auto
+        margin: 0 0 .4rem 0

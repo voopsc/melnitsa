@@ -1,0 +1,30 @@
+.btn
+  display: inline-flex
+  justify-content: center
+  font: 900 .85em/1.5 $main-font
+  background: $btn-bg
+  transition: background .3s linear
+  padding: 1.05rem 2.3rem
+  border-radius: 50px
+  color: $color-text-two
+  width: auto
+  &:hover
+    background: $btn-hover
+  &.disable
+    background: $color-one
+  &.neutral
+    background: none
+    border: 2px solid $main-color
+    &:hover
+      background: $btn-hover
+
+// .buy-btn
+//   border-radius: 50%
+//   width: 40px
+//   height: 40px
+//   padding: 10px
+//   align-items: center
+//   img,
+//   svg
+//     width: 100%
+//     margin-bottom: 0

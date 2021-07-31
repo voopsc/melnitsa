@@ -1,0 +1,218 @@
+@media (min-width: 1048px) and (max-width: 1720px)
+  .header__wrp
+    font-size: 14px
+
+  .cart-box
+    padding: 0
+    width: 20%
+    .wrp
+      width: 120%
+
+  .product-list
+    > li
+      flex: 33.33%
+      max-width: 33.33%
+
+  .checkbox-box
+    .checkbox-btn
+      flex: 1 1 100%
+      width: 100%
+      &:first-of-type,
+      &:last-of-type
+        padding: 0
+
+@media (max-width: 1440px)
+  .title-main
+    font-size: 1.7em
+
+  .title
+    font-size: 1.35em
+
+  section
+    padding-bottom: 25px
+
+  // template
+  .product-list
+    > li
+      flex: 50%
+      max-width: 50%
+
+  .icon-list
+    > li
+      flex: 1 1 50%
+      width: 50%
+
+  .product-nav-item
+    flex: 1 1 50%
+    width: 50%
+    &.prev,
+    &.next
+      padding: 0 1rem
+      &::after
+        content: none
+    &.prev
+      order: 2
+    &.next
+      order: 3
+    > div
+      border-radius: 0
+      padding: 0.4rem
+
+
+
+/* For tablets */
+@media (max-width: 1048px)
+  // general
+  .list-two-items,
+  .list-three-items,
+  .list-four-items
+    > li
+      flex: 1 1 50%
+      width: 50%
+      max-width: 50%
+      margin-bottom: 1rem
+
+  // mobile header and layout
+  .header
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 99
+    background: $color-one
+    .wrapper
+      justify-content: space-between
+
+    .mobile-menu
+      display: flex
+
+    .logo
+      max-width: 50px
+      overflow: hidden
+      img,
+      svg
+        width: 220px
+
+  .header__wrp,
+  .aside-menu
+    display: none
+
+  .main__content
+    flex: 1 1 100%
+    padding-top: 115px
+
+  .text-box
+    padding: 0
+
+  // cart
+  .main__content
+    max-width: none
+    flex-basis: calc(100% - 215px)
+
+  .cart-box
+    position: fixed
+    top: 100px
+    right: -100%
+    width: 100%
+    height: calc(100vh - 100px)
+    padding: 5%
+    background: rgba(0,0,0,0.7)
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    overflow: auto
+    z-index: 20
+    +animate
+    .wrp
+      max-width: 550px
+      height: auto
+    .close-icon
+      display: inline-flex
+      z-index: 7
+    &.open
+      right: 0
+
+  .cart
+    padding: 1.2rem
+
+  .cart-order
+    padding: 0
+
+  .product-nav-item
+    display: flex
+    align-items: center
+    flex-wrap: nowrap
+    text-align: right
+
+  .checkbox-box
+    .checkbox-btn
+      flex: 1 1 100%
+      width: 100%
+      &:first-of-type,
+      &:last-of-type
+        padding: 0
+
+/* For small tables */
+@media (max-width: 900px)
+  .company-info,
+  .footer-nav-wrp
+    flex-basis: 50%
+    width: 50%
+
+  .filter-list
+    .icon
+      min-height: 25px
+
+  .buy-btn
+    width: 100%
+
+/* For mobile */
+@media (max-width: 680px)
+
+  // general
+  .one-of-three,
+  .two-of-three,
+  .one-of-four,
+  .two-of-four,
+  .three-of-four
+    flex: 1 1 100%
+    width: 100%
+    &.mx-w
+      max-width: none
+
+
+  .list-three-items,
+  .list-four-items
+    > li
+      flex: 1 1 100%
+      width: 100%
+      max-width: none
+      padding: 0
+      margin-bottom: 1.9rem
+
+  // template
+  .company-info
+    order: 1
+    display: flex
+    flex-flow: column wrap
+    align-items: center
+    justify-content: center
+    p
+      text-align: center
+    .payment-list
+      justify-content: center
+
+  .footer__nav
+    justify-content: center
+    text-align: center
+
+  .category-title
+    .dropdown__title
+      text-align: left
+    .dropdown-wrp
+      width: 100%
+
+  .order-form
+    order: 1
+
+  .product-cart__info
+    padding: 0
