@@ -62,19 +62,24 @@ svg
 // socials
 .socials
   display: flex
-  justify-content: center
+  justify-content: flex-start
   align-items: center
   flex-wrap: wrap
   > li
     margin: 0 1.4rem .5rem 0
+    display: flex
     &:last-of-type
       margin-right: 0
   a
+    min-width: 50px
+    padding: 10px
+    border-radius: 50%
+    border: 2px solid $main-color
     &:hover
       svg
         fill: $main-color
   svg
-    fill: $color-text-two
+    fill: $main-color
     +animate
 
 // dropdown
