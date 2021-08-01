@@ -12,6 +12,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
   </head>
 
   <body>
@@ -43,12 +44,17 @@
             <a href="#" class="phone-btn">+380 12 345 67 89</a>
           </div>
         </div>
+        <div class="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
       </div>
     </header>
     <main>
       <section class="first-screen first-screen-home v-top">
         <div class="wrapper v-bot">
-          <div class="two-of-four">
+          <div class="two-of-four animateIt" data-animation="animFadeInUp">
             <div class="info-box-top">
               <h1 class="title">recreation center</h1>
               <h2 class="title-main">Melnitsa</h2>
@@ -97,7 +103,7 @@
               <p>We invite you to rest in one of the most ecologically clean and picturesque corners of the Kharkov region in Korobov Khutora, the hotel "Melnitsa". Our base offers its guests comfort, coziness, positive emotions, energy and good mood! Indeed, in addition to accommodation services, we will provide not just relaxation, but an exciting and unforgettable vacation. We are glad to see our guests at any time of the year or day!</p>
             </div>
           </div>
-          <div class="two-of-four img-wrp">
+          <div class="two-of-four img-wrp animateIt" data-animation="animFadeInDown">
             <img src="img/1.jpg" alt="">
             <a href="#" class="btn">Book apartments</a>
           </div>
@@ -105,37 +111,216 @@
       </section>
       <section class="right-bg-block">
         <div class="wrapper">
-          <div class="two-of-five mx-w">
+          <div class="two-of-five mx-w animateIt" data-animation="animFadeInLeft">
             <h2 class="title">Hotel</h2>
             <h3 class="title-submain">Residence</h3>
             <p>On the territory of the base there are cozy houses with a capacity of 2 to 5 people, in the Ukrainian style. The base resembles the look of a Cossack battle</p>
             <a href="#" class="line-btn">Look all apartments</a>
           </div>
-          <div class="two-of-five mx-w img-wrp">
+          <div class="two-of-five mx-w img-wrp animateIt" data-animation="animFadeInRight">
             <img src="img/2.jpg" alt="">
           </div>
         </div>
       </section>
       <section>
         <div class="wrapper v-center">
-          <div class="one-of-three">
+          <div class="one-of-three animateIt" data-animation="animFadeInLeft">
             <h2 class="title">restaurant</h2>
             <h3 class="title-submain">cafe & bar</h3>
             <p>We offer delicious 3 meals a day. We also provide the organization of weddings, holidays, corporate events. Live music is played during the summer</p>
           </div>
-          <div class="two-of-three img-wrp">
+          <div class="two-of-three img-wrp animateIt" data-animation="animFadeInRight">
             <img src="img/cafe.png" alt="">
           </div>
         </div>
       </section>
       <section>
+        <div class="booking-top flex f-center animateIt" data-animation="animFadeInUp">
+          <div class="wrapper">
+            <div class="one-of-three">
+              <h2 class="title">book the</h2>
+              <h3 class="title-submain">apartments</h3>
+            </div>
+            <div class="booking-form-wrp two-of-three">
+              <form class="booking-form form-main flex" action="#" method="post">
+                <fieldset class="one-of-three">
+                  <input type="text" name="" value="" placeholder="Your name*" required>
+                </fieldset>
+                <fieldset class="one-of-three">
+                  <input type="email" name="" value="" placeholder="youremail@mail.com*" required>
+                </fieldset>
+                <fieldset class="one-of-three">
+                  <input type="tel" name="" value="" placeholder="Your phone*" required>
+                </fieldset>
+                <fieldset class="one-of-three">
+                  <input type="tel" name="" value="" placeholder="Check-in date" required>
+                </fieldset>
+                <fieldset class="one-of-three">
+                  <input type="tel" name="" value="" placeholder="Check-out date" required>
+                </fieldset>
+                <fieldset class="one-of-three">
+                  <input type="number" name="" value="" placeholder="Guests" min="1">
+                </fieldset>
+                <button type="submit" name="submit" class="btn">Get apartments pricelist</button>
+              </form>
+              <p class="notice">*When you press the button you accept our privacy policy</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="booking-bot flex f-center">
+          <div class="wrapper">
+            <div class="two-of-four">
+              <ul class="apartments-list list-left">
+                <li class="animateIt" data-animation="animFadeInLeft">
+                  <div class="img-wrp">
+                    <img src="img/p1.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInLeft">
+                  <div class="img-wrp">
+                    <img src="img/p1.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInLeft">
+                  <div class="img-wrp">
+                    <img src="img/p3.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInLeft">
+                  <div class="img-wrp">
+                    <img src="img/p5.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInLeft">
+                  <div class="img-wrp">
+                    <img src="img/p7.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInLeft">
+                  <div class="img-wrp">
+                    <img src="img/p9.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="two-of-four">
+              <ul class="apartments-list list-right">
+                <li class="animateIt" data-animation="animFadeInRight">
+                  <div class="img-wrp">
+                    <img src="img/p2.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInRight">
+                  <div class="img-wrp">
+                    <img src="img/p4.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInRight">
+                  <div class="img-wrp">
+                    <img src="img/p6.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInRight">
+                  <div class="img-wrp">
+                    <img src="img/p8.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInRight">
+                  <div class="img-wrp">
+                    <img src="img/p10.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+                <li class="animateIt" data-animation="animFadeInRight">
+                  <div class="img-wrp">
+                    <img src="img/p9.jpg" alt="">
+                  </div>
+                  <div class="information">
+                    <p class="headline">Standart</p>
+                    <p class="subtitle">First room</p>
+                    <p>A small room for 2 persons with Wi-Fi and bathroom</p>
+                    <a href="#" class="line-btn">Look </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
         <div class="entertainment wrapper v-top">
-          <div class="two-of-five mx-w">
+          <div class="two-of-five mx-w animateIt" data-animation="animFadeInLeft">
             <h2 class="title">Entertaiment</h2>
             <h3 class="title-submain">Recreation and entertainment</h3>
             <p>Do you like active rest or prefer to sit on the bank of the river with an interesting book, here everyone will find entertainment to their liking. Fishing enthusiasts, for example, will find a lot of pleasure here, and not only in summer. At the base, you can rent a boat and fully explore all the "fish" surroundings.</p>
           </div>
-          <div class="three-of-five img-wrp">
+          <div class="three-of-five img-wrp animateIt" data-animation="animFadeInRight">
             <img src="img/3.jpg" alt="">
             <div class="information flex np">
               <div class="two-of-four">
@@ -270,6 +455,8 @@
         <a href="#">voops digital</a>
       </div>
     </footer>
-    <!-- <script src="js/script.js"></script> -->
+    <!-- scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

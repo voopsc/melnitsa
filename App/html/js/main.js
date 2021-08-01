@@ -25,6 +25,64 @@ function changeDisplay(element, status)
   element.style.display = status;
 }
 
+// animate element
+function animateIt() {
+
+  let elements = document.querySelectorAll('.animateIt');
+
+  let loading = elementsAnimation(elements);
+
+  setTimeout(scrollAnimation, loading, elements);
+};
+
+// helper functions for animateIt
+function elementsAnimation(elements) {
+    let i = 0;
+    Array.prototype.forEach.call(elements, function(item){
+      let animationName = item.getAttribute('data-animation');
+      setTimeout(checkElementInViewport, i, item, animationName);
+      i += 50;
+    });
+    return i;
+};
+
+function scrollAnimation(elements) {
+  window.addEventListener('scroll', function() {
+
+    Array.prototype.forEach.call(elements, function(scrollItem){
+      let doneClass = scrollItem.className;
+      if (doneClass.match('done')) {
+        return false;
+      } else {
+        elementsAnimation(elements);
+      }
+    });
+  });
+}
+
+function checkElementInViewport(element, animationName) {
+  let targetPosition = {
+        top: window.pageYOffset + element.getBoundingClientRect().top,
+        left: window.pageXOffset + element.getBoundingClientRect().left,
+        right: window.pageXOffset + element.getBoundingClientRect().right,
+        bottom: window.pageYOffset + element.getBoundingClientRect().bottom
+      },
+      windowPosition = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
+  if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+    targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+    targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+    targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+    // Если элемент полностью видно, то запускаем следующий код
+    element.classList.add(animationName);
+    element.classList.add('done');
+  }
+};
+// end of helper functions
 
 // Get background image for singleElement
 function getBgImage(className) {

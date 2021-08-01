@@ -91,6 +91,7 @@ section,
 
 section {
   padding: 50px 0;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -265,6 +266,230 @@ section {
       flex-wrap: nowrap;
 }
 
+button,
+input,
+textarea,
+select {
+  -webkit-apparance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  font-variant: lining-nums;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea,
+select,
+button {
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-main {
+  margin-bottom: 1rem;
+}
+.form-main label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form-main .icon {
+  margin-right: 1rem;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+.form-main svg {
+  fill: #fff;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+.form-main input,
+.form-main select,
+.form-main textarea {
+  border-radius: 5px;
+  padding: 0.75rem 1.2rem;
+  font: 400 0.9em/1.5 "Raleway", Arial, Helvetica, sans-serif;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+.form-main input:focus,
+.form-main select:focus,
+.form-main textarea:focus {
+  border-color: #ac7f55;
+}
+.form-main input:focus ~ .icon svg,
+.form-main select:focus ~ .icon svg,
+.form-main textarea:focus ~ .icon svg {
+  fill: #ac7f55;
+}
+.form-main button {
+  padding: 1.05rem 0;
+  width: 100%;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+.form-main .label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font: 700 0.9em/1.5 "Raleway", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+.form-main .notice {
+  font-weight: 400;
+}
+.form-main option {
+  background: #fff;
+}
+.form-main .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.form-main .checkmark {
+  margin-right: 1rem;
+}
+.form-main .checkbox {
+  overflow: hidden;
+  position: relative;
+}
+.form-main .checkbox .notice {
+  opacity: 0.5;
+}
+
+.checkbox-box,
+.two-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.checkbox-box .checkbox-btn,
+.checkbox-box fieldset,
+.two-inputs .checkbox-btn,
+.two-inputs fieldset {
+  width: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+.checkbox-box .checkbox-btn:first-of-type,
+.checkbox-box fieldset:first-of-type,
+.two-inputs .checkbox-btn:first-of-type,
+.two-inputs fieldset:first-of-type {
+  padding-right: 0.5rem;
+}
+.checkbox-box .checkbox-btn:last-of-type,
+.checkbox-box fieldset:last-of-type,
+.two-inputs .checkbox-btn:last-of-type,
+.two-inputs fieldset:last-of-type {
+  padding-left: 0.5rem;
+}
+
+.checkbox-btn {
+  position: relative;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.checkbox-btn > div {
+  padding: 0.75rem;
+  border: 2px solid rgba(0, 0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.checkbox-btn input {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  opacity: 0;
+  z-index: -1;
+}
+.checkbox-btn input:checked + div {
+  border-color: #ac7f55;
+}
+.checkbox-btn input:checked ~ .checkmark {
+  background: #ac7f55;
+}
+.checkbox-btn svg {
+  fill: #000;
+}
+
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -404,6 +629,7 @@ svg {
 }
 
 .burger {
+  display: none;
   width: 21px;
   height: 1rem;
   position: relative;
@@ -412,7 +638,7 @@ svg {
 .burger span {
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: #ac7f55;
   -webkit-transition: 0.3s linear all;
   transition: 0.3s linear all;
 }
@@ -794,12 +1020,102 @@ iframe {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.booking-form-wrp {
+  margin-bottom: 2.3rem;
+}
+
+.booking-top {
+  padding: 4rem 0 2rem 0;
+  background: #f3f3f3;
+}
+
+.booking-bot {
+  position: relative;
+  top: -2rem;
+}
+
+.booking-form {
+  background: #2c2c2c;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.booking-form fieldset {
+  margin-bottom: 1rem;
+}
+.booking-form input {
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+}
+.booking-form .btn {
+  position: absolute;
+  bottom: -2.5rem;
+  right: 1.3rem;
+  width: auto;
+  padding: 1.35rem 3rem;
+}
+.booking-form + .notice {
+  max-width: 50%;
+  font-size: 0.8em;
+}
+
+.apartments-list {
+  position: relative;
+}
+.apartments-list > li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+.apartments-list .img-wrp {
+  max-width: 70%;
+  margin: 0;
+}
+.apartments-list .information {
+  max-width: 350px;
+  position: absolute;
+}
+
+.list-left > li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.list-left .information {
+  top: 0;
+  right: 0;
+}
+
+.list-right {
+  top: 1.3rem;
+}
+.list-right > li {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.list-right .information {
+  bottom: 0;
+  left: 0;
+}
+
 .myCopy {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.8em;
-  margin-bottom: 35px;
+  margin-bottom: 3.5rem;
 }
 .myCopy img {
   width: 15px;
@@ -819,4 +1135,180 @@ iframe {
 .myCopy img,
 .myCopy a {
   opacity: 0.6;
+}
+
+@media (max-width: 1440px) {
+  .title-main {
+    font-size: 3em;
+  }
+
+  .title-submain {
+    font-size: 2em;
+  }
+
+  .entertainment .information {
+    padding: 1.2rem 0.4rem;
+    position: static;
+  }
+}
+/* For tablets */
+@media (max-width: 1048px) {
+  .list-two-items > li,
+.list-three-items > li,
+.list-four-items > li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    width: 50%;
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .header__menu,
+.right-bg-block .img-wrp:before {
+    content: none;
+    display: none;
+  }
+
+  .burger {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0 1rem;
+  }
+
+  .header {
+    background: #f3f3f3;
+  }
+  .header .wrapper {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 94px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 94px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    background: #f3f3f3;
+    padding: 2rem 1rem;
+    overflow: auto;
+    -webkit-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+  }
+  .header__menu.open {
+    left: 0;
+  }
+  .header__menu.open .header__nav,
+.header__menu.open .lang-contacts {
+    width: 100%;
+  }
+  .header__menu.open .lang-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__menu.open .header__nav,
+.header__menu.open .header__nav a {
+    display: block;
+  }
+  .header__menu.open .header__nav a {
+    padding: 1.5rem 1rem;
+  }
+}
+/* For small tables */
+@media (max-width: 900px) {
+  .apartments-list > li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .apartments-list .information,
+.apartments-list .img-wrp {
+    position: static;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav a,
+.lang-contacts .list,
+.lang-contacts {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+
+  .line-btn {
+    margin-bottom: 1.5rem;
+  }
+}
+.first-screen-home .wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking-form + .notice,
+.apartments-list .information,
+.apartments-list .img-wrp,
+.entertainment .information {
+  max-width: none;
+}
+
+/* For mobile */
+@media (max-width: 680px) {
+  .one-of-three,
+.two-of-three,
+.one-of-four,
+.two-of-four,
+.three-of-four,
+.two-of-five {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%;
+  }
+  .one-of-three.mx-w,
+.two-of-three.mx-w,
+.one-of-four.mx-w,
+.two-of-four.mx-w,
+.three-of-four.mx-w,
+.two-of-five.mx-w {
+    max-width: none;
+  }
+
+  .list-three-items > li,
+.list-four-items > li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin-bottom: 1.9rem;
+  }
+
+  .booking-form .btn {
+    position: static;
+    margin: 0 1rem;
+  }
+
+  iframe {
+    min-height: 20rem;
+  }
 }

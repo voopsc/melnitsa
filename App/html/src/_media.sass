@@ -2,6 +2,16 @@
 
 
 @media (max-width: 1440px)
+  .title-main
+    font-size: 3em
+
+  .title-submain
+    font-size: 2em
+
+  .entertainment .information
+    padding: 1.2rem .4rem
+    position: static
+
 
 /* For tablets */
 @media (max-width: 1048px)
@@ -15,8 +25,80 @@
       max-width: 50%
       margin-bottom: 1rem
 
+  // mobile
+  .header__menu,
+  .right-bg-block .img-wrp:before
+    content: none
+    display: none
+
+  .burger
+    display: inline-flex
+    margin: 0 1rem
+
+  .header
+    background: $bg-color
+    .wrapper
+      width: 100%
+      justify-content: space-between
+
+  .header__menu
+    position: fixed
+    top: 94px
+    left: -100%
+    width: 100%
+    height: calc(100vh - 94px)
+    display: flex
+    align-content: flex-start
+    background: $bg-color
+    padding: 2rem 1rem
+    overflow: auto
+    +animate
+    &.open
+      left: 0
+      .header__nav,
+      .lang-contacts
+        width: 100%
+      .lang-contacts
+        flex-direction: column
+        justify-content: center
+        align-items: center
+      .header__nav,
+      .header__nav a
+        display: block
+      .header__nav a
+        padding: 1.5rem 1rem
+
+
 /* For small tables */
 @media (max-width: 900px)
+  .apartments-list
+    > li
+      flex-wrap: wrap
+    .information,
+    .img-wrp
+      position: static
+      width: 100%
+
+
+@media (max-width: 768px)
+  .header__nav a,
+  .lang-contacts .list,
+  .lang-contacts
+    justify-content: center
+    width: 100%
+
+  .line-btn
+    margin-bottom: 1.5rem
+
+.first-screen-home
+  .wrapper
+    align-items: center
+
+.booking-form + .notice,
+.apartments-list .information,
+.apartments-list .img-wrp,
+.entertainment .information
+  max-width: none
 
 /* For mobile */
 @media (max-width: 680px)
@@ -25,7 +107,8 @@
   .two-of-three,
   .one-of-four,
   .two-of-four,
-  .three-of-four
+  .three-of-four,
+  .two-of-five
     flex: 1 1 100%
     width: 100%
     &.mx-w
@@ -40,3 +123,10 @@
       max-width: none
       padding: 0
       margin-bottom: 1.9rem
+
+  .booking-form .btn
+    position: static
+    margin: 0 1rem
+
+  iframe
+    min-height: 20rem
