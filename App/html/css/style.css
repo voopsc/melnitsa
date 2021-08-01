@@ -544,6 +544,9 @@ button {
   right: 5px;
   height: 15px;
 }
+.line-btn:hover {
+  color: #ac7f55;
+}
 
 .list {
   display: -webkit-box;
@@ -1256,20 +1259,20 @@ iframe {
   .line-btn {
     margin-bottom: 1.5rem;
   }
-}
-.first-screen-home .wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 
-.booking-form + .notice,
+  .first-screen-home .wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .booking-form + .notice,
 .apartments-list .information,
 .apartments-list .img-wrp,
 .entertainment .information {
-  max-width: none;
+    max-width: none;
+  }
 }
-
 /* For mobile */
 @media (max-width: 680px) {
   .one-of-three,
